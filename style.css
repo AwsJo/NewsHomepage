@@ -320,13 +320,15 @@ main .other-news .card h4::before {
 main .other-news .card p {
   grid-row: 3/4;
   opacity: 0.8;
+  margin-top: 0;
 }
 /* Other News */
-@media (max-width: 800) {
+@media (max-width: 800px) {
   main .other-news .card p {
     margin-top: -7px;
   }
 }
+
 @media (max-width: 500px) {
   main .other-news .card h4::before {
     font-size: 1.5rem;
