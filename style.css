@@ -28,6 +28,8 @@ ul {
   width: 80%;
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 375px) {
   .container {
@@ -47,11 +49,17 @@ ul {
 /* Header */
 header {
   display: flex;
-  width: 100%;
+  width: inherit;
+  max-width: 1440px;
   height: 15vh;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
+
 header .logo {
   width: 4rem;
 }
@@ -100,6 +108,7 @@ header button {
     font-size: 1.1rem;
   }
 }
+
 /* Navigation Menu */
 @media (max-width: 550px) {
   header {
@@ -166,7 +175,9 @@ header button {
 }
 
 /* Main include Hero / Other News*/
-
+main {
+  margin-top: 15vh;
+}
 /* Hero */
 main .hero {
   display: grid;
@@ -322,7 +333,7 @@ main .other-news .card p {
   opacity: 0.8;
   margin-top: 0;
 }
-/* Other News */
+/* Other News Resoponsive */
 @media (max-width: 800px) {
   main .other-news .card p {
     margin-top: -7px;
@@ -336,6 +347,14 @@ main .other-news .card p {
   main .other-news .card h4 {
     font-size: 1.25rem;
     padding-bottom: 0;
+  }
+}
+@media (max-width: 300px) {
+  main .other-news {
+    grid-template-columns: 1fr;
+  }
+  main .other-news .card p {
+    margin-top: -18px;
   }
 }
 /* Footer */
